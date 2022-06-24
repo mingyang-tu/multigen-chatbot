@@ -31,16 +31,17 @@ The dataset is generated from `facebook/blenderbot-400M-distill` by ourselves.
 
 ### Inference
 ```
-python simulator.py \
+python -W ignore \
+simulator.py \
 --split test \
 --num_chats 980 \
---model_name_or_path [/path/to/model]
+--model_name_or_path ./gpt2-dialog
 ```
 
 ### Display results
 #### Format chats
 ```
-python formatDialogue.py -f [/path/to/output.jsonl]
+python formatDialogue.py -f output.jsonl
 ```
 #### Display
 ```
@@ -51,7 +52,7 @@ cat output-formatted.txt
 The evaluation metric we use is ```hit rate```, which is the percentage of conversations that contain keywords in all conversations.
 
 ```
-python hit.py --prediction [/path/to/output.jsonl]
+python hit.py --prediction output.jsonl
 ```
 
 ## Reference
