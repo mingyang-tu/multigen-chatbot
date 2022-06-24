@@ -32,7 +32,7 @@ unzip data.zip
 ```
 
 
-Preprocessing multi-hop relational paths for the model.
+Preprocessing of the multi-hop relational paths for the model.
 
 ```
 python ground_concepts_simple.py dialog

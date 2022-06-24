@@ -55,7 +55,7 @@ python formatDialogue.py -f output.jsonl
 cat output-formatted.txt
 ```
 
-### Evaluation
+### Evaluate
 The evaluation metric we use is ```hit rate```, which is the percentage of conversations that contain keywords in all conversations.
 
 ```
