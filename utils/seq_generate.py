@@ -140,24 +140,35 @@ def preprocess_data(args, src, target_concepts, tokenizer,
     return output
 
 def build_generator(args, tokenizer):
+    beam_size = 10
+    sampling = True
+    topk = 50
+    topp = 0.9
+    print("=" * 30)
+    print(f"beam_size = {beam_size}")
+    print(f"sampling = {sampling}")
+    print(f"topk = {topk}")
+    print(f"topp = {topp}")
+    print("=" * 30)
+
     generator = SequenceGenerator(
         args,
         Dictionary(tokenizer.encoder),
         tokenizer,
-        beam_size=getattr(args, 'beam', 4),
-        max_len_a=getattr(args, 'max_len_a', 0),
-        max_len_b=getattr(args, 'max_len_b', 32),
-        min_len=getattr(args, 'min_len', 1),
-        normalize_scores=(not getattr(args, 'unnormalized', False)),
-        len_penalty=getattr(args, 'lenpen', 1),
-        unk_penalty=getattr(args, 'unkpen', 0),
-        sampling=getattr(args, 'sampling', True),
-        sampling_topk=getattr(args, 'sampling_topk', 80),
-        sampling_topp=getattr(args, 'sampling_topp', 0.95),
-        temperature=getattr(args, 'temperature', 1.),
-        diverse_beam_groups=getattr(args, 'diverse_beam_groups', -1),
-        diverse_beam_strength=getattr(args, 'diverse_beam_strength', 0.5),
-        match_source_len=getattr(args, 'match_source_len', False),
-        no_repeat_ngram_size=getattr(args, 'no_repeat_ngram_size', 0),
+        beam_size=beam_size,
+        max_len_a=0,
+        max_len_b=32,
+        min_len=1,
+        normalize_scores=True,
+        len_penalty=1,
+        unk_penalty=0,
+        sampling=sampling,
+        sampling_topk=topk,
+        sampling_topp=topp,
+        temperature=1.,
+        diverse_beam_groups=-1,
+        diverse_beam_strength=0.5,
+        match_source_len=False,
+        no_repeat_ngram_size=0,
     )  
     return generator
