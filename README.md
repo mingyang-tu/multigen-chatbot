@@ -29,6 +29,13 @@ The dataset is generated from `facebook/blenderbot-400M-distill` by ourselves.
 
 ## Usage
 
+Download required files.
+
+```
+wget https://www.dropbox.com/s/ckovil7pe1gaz23/data.zip?dl=1 -O data.zip
+unzip data.zip
+```
+
 ### Inference
 ```
 python -W ignore \

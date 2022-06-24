@@ -24,6 +24,14 @@ wget -O merges.txt https://s3.amazonaws.com/models.huggingface.co/bert/gpt2-merg
 wget -O config.json https://s3.amazonaws.com/models.huggingface.co/bert/gpt2-config.json
 ```
 
+Download other required files.
+
+```
+wget https://www.dropbox.com/s/ckovil7pe1gaz23/data.zip?dl=1 -O data.zip
+unzip data.zip
+```
+
+
 Preprocessing multi-hop relational paths for the model.
 
 ```
