@@ -62,6 +62,13 @@ The evaluation metric we use is ```hit rate```, which is the percentage of conve
 python hit.py --prediction output.jsonl
 ```
 
-## Reference
-- [SalesBot: Transitioning from Chit-Chat to Task-Oriented Dialogues](https://arxiv.org/abs/2204.10591)
-- [Multigen](https://github.com/cdjhz/multigen)
+## Citation
+
+```
+@inproceedings{ji2020language,
+    title = "Language Generation with Multi-Hop Reasoning on Commonsense Knowledge Graph",
+    author = "Ji, Haozhe and Ke, Pei and Huang, Shaohan and Wei, Furu and Zhu, Xiaoyan and Huang, Minlie",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing",
+    year = "2020",
+}
+```
