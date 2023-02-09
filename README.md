@@ -1,4 +1,4 @@
-# ADL2022 Spring Final Project - Topic Transition Through Dialogue
+# ADL Final Project - Topic Transition Through Dialogue
 
 ## Introduction
 This is a PyTorch implementation of a chatbot that can smoothly guide the conversation to some specific topics. 
