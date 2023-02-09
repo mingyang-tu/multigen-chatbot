@@ -1,17 +1,13 @@
-# Topic Transition Through Dialogue Using Multigen
+# ADL2022 Spring Final Project - Topic Transition Through Dialogue
 
 ## Introduction
 This is a PyTorch implementation of a chatbot that can smoothly guide the conversation to some specific topics. 
 
-![](./figures/img_framework.png)
-
 ### Model
 We use [Multigen](https://github.com/cdjhz/multigen) as our generation model. 
 
-![](./figures/img_model.png)
-
 ### Dataset
-The dataset is generated from `facebook/blenderbot-400M-distill` by ourselves.
+The dataset is generated from [facebook/blenderbot-400M-distill](https://huggingface.co/facebook/blenderbot-400M-distill) by ourselves.
 
 | Train |  Dev  |
 | ----- | ----- |
